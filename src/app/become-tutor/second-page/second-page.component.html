@@ -1,0 +1,73 @@
+<div class="header">
+    <app-header></app-header>
+</div>
+
+<section class="secondpage">
+    <div class="secondp col-lg-11 m-auto">
+        <br>
+        <br>
+        <div class="text-left">
+            <h3>Become a connectTutor!</h3>
+            <p>connectTutor! seeks qualified applicants for tutoring jobs nationwide. Enjoy the flexibility and compensation of a tutor job in your field. We encourage all educational enthusiasts to be a tutor and make a difference in someone’s life.</p>
+        </div>
+
+        <br>
+        <br>
+
+        <form [formGroup]="vacancy_service.formModel" autocomplete="off" (submit)="onSubmit()">
+            <div class="text-left">
+                <h4>Undergraduate Degree</h4>
+            </div>
+    
+            <hr>
+
+            <div class="form-group required">
+              <label>Name of Institution</label>
+              <input class="form-control" formControlName="Undergraduate_College">
+              <label class="text-danger" *ngIf="vacancy_service.formModel.get('Undergraduate_College')?.touched && vacancy_service.formModel.get('Undergraduate_College')?.errors?.['required']">This field is required.</label>
+            </div>
+      
+            <div class="form-group required">
+              <label>Major Modules</label>
+              <input class="form-control" formControlName="Undergraduate_Majors">
+              <label class="text-danger" *ngIf="vacancy_service.formModel.get('Undergraduate_Majors')?.touched && vacancy_service.formModel.get('Undergraduate_Majors')?.errors?.['required']">This field is required.</label>
+            </div>
+      
+            <div class="form-group required">
+              <label>Degree Type</label>
+              <input class="form-control" formControlName="Undergraduate_Degree_Type">
+              <label class="text-danger" *ngIf="vacancy_service.formModel.get('Undergraduate_Degree_Type')?.touched && vacancy_service.formModel.get('Undergraduate_Degree_Type')?.errors?.['required']">This field is required.</label>
+            </div>
+      
+            <div class="form-group required">
+              <label>Year Completion</label>
+              <input class="form-control" formControlName="Degree_Completion_Year">
+              <label class="text-danger" *ngIf="vacancy_service.formModel.get('Degree_Completion_Year')?.touched && vacancy_service.formModel.get('Degree_Completion_Year')?.errors?.['required']">This field is required.</label>
+            </div>
+      
+            <div class="mb-3">
+                <label for="exampleInputContact" class="form-label">Teaching Certificate?</label> &nbsp;
+                <input name="SetValue" type="radio"> Yes &nbsp;
+                <input name="SetValue" type="radio"> No
+                <textarea style="height: 150px;" type="text" class="form-control" formControlName="Teaching_Certificate" placeholder="If yes, in which subject(s)"></textarea>
+                <label class="text-danger" *ngIf="vacancy_service.formModel.get('Teaching_Certificate')?.touched && vacancy_service.formModel.get('Teaching_Certificate')?.errors?.['required']">This field is required.</label>
+              </div>
+      
+            <div class="form-row">
+              <div class="form-group col-md-8 offset-md-2">
+                <button routerLink="/become-tutor" class="btn btn-dark" style="height: fit-content;">Back</button> &nbsp;
+                <button type="submit" class="btn btn-dark" style="height: fit-content;" [disabled]="!vacancy_service.formModel.valid">Continue</button>
+              </div>
+            </div>
+          </form>
+
+        <div class="success" *ngIf="success_message">
+            Information has been saved successfully
+            {{vacancy_selected}}
+        </div>
+      
+        <div class="alert" *ngIf="error_message">
+            {{error_message}}
+        </div>
+    </div>
+</section>

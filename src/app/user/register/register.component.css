@@ -1,0 +1,19 @@
+.registeruser
+{
+    background-color: #eff6ff;
+    padding: 140px 100px;
+}
+
+.register
+{
+    background-color: #ffffff;
+    padding: 20px 30px;
+}
+
+@media screen and (max-width:600px){
+    .registeruser
+     {
+        padding: 140px 30px;
+     }
+}
+

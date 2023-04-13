@@ -1,0 +1,91 @@
+
+
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.footer-container{
+  background-color: lightskyblue;
+  padding: bottom 4rem;
+}
+.footer
+{
+  width: 80%;
+  height: 90px;
+  display: flex;
+  background-color: lightskyblue;
+  color: #ffff;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.footer-heading 
+{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+.footer-heading h2
+{
+  margin-bottom: 2rem;
+
+}
+
+.footer-heading a{
+  color: #ffff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+.footer-heading a:hover
+{
+  color:  #040c72;
+  transition: 0.3s ease-out;
+}
+
+.fa {
+  padding: 6px;
+  font-size: 10px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 4px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-Instagram {
+  background: #df232d;
+  color: white;
+}
+
+.fa-Twitter {
+  background: #7ea3f1;
+  color: white;
+}
+
+.fa-YouTube {
+  background: #fc0e06;
+  color: white;
+}
+
+.fa-TikTok {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-GitHub {
+  background: #d12e2e;
+  color: white;
+}
+
+
+

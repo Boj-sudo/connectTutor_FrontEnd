@@ -1,0 +1,59 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="form-group row" style="width: 100%;">
+        <label class="col-sm-2 col-form-label">Tutor Email</label>
+        <div class="col-sm-10">
+            <select class="form-control" [(ngModel)]="Tutor_Email">
+                <option>Select</option>
+                <option *ngFor="let tutEmail of TutorEmailList">
+                    {{tutEmail.Tutor_Email}}
+                </option>
+            </select>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <label class="col-sm-2 col-form-label">Student Email</label>
+        <div class="col-sm-10">
+            <select class="form-control" [(ngModel)]="Student_Email">
+                <option>Select</option>
+                <option *ngFor="let stuEmail of StudentsEmailList">
+                    {{stuEmail.Student_Email}}
+                </option>
+            </select>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <label class="col-sm-2 col-form-label">Session Date</label>
+        <div class="col-sm-10">
+            <input type="date" min="{{currentDate | date:'yyyy-MM-dd'}}" class="form-control" [(ngModel)]="Session_Date">
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <label class="col-sm-2 col-form-label">Start Session Time</label>
+        <div class="col-sm-10">
+            <input type="time" class="form-control" [(ngModel)]="Start_Time">
+        </div>
+
+        <label class="col-sm-2 col-form-label">End Session Time</label>
+        <div class="col-sm-10">
+            <input type="time" class="form-control" [(ngModel)]="End_Time">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Session Status</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Session_Status">
+        </div>
+    </div>
+</div>
+
+<button (click)="addSession()" *ngIf="_session.Session_ID==0" class="btn btn-primary">Create</button>
+
+

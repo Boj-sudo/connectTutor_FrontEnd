@@ -1,0 +1,26 @@
+<h1 style="text-align: center"><b>Notifications</b></h1>
+
+<hr>
+
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+        <th>Tutor Email</th>
+        <th>Module Name</th>
+        <th> Start Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let dataItem of bookingDetails">
+        <td>{{ dataItem.Tutor_Email }}</td>
+        <td>{{ dataItem.Module_Name }}</td>
+        <td>{{ dataItem.Start_Date }}</td>
+        <td>{{ dataItem.Start_Time }}</td>
+        <td>{{ dataItem.End_Time }}</td>
+    </tr>
+  </tbody>
+</table>

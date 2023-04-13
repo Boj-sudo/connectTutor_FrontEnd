@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="col-md-3">
+      <a routerLink="/home"><img src="../../../assets/Logo_edu.jpg" height="15%" width="15%"></a>
+      <a class="navbar-brand" routerLink="/home"><b>SocraTutor</b></a>
+    </div>
+  </nav>
+  
+  <section class="loginnow">
+    <div class="login col-lg-4 m-auto shadow-lg">
+      <div class="text-center">
+        <h2>Login</h2>
+        <h6>Please enter your credentials</h6>
+    </div>
+  
+      <form #loginForm='ngForm' class="mb-4" autocomplete="off" (ngSubmit)="loginForm.valid && onSubmit(loginForm)">
+        <div class="form-group">
+          <label>Username</label>
+          <input class="form-control" #User_Email="ngModel" name="User_Email" [(ngModel)]="Email" required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" #User_Password="ngModel" name="User_Password" [(ngModel)]="Password" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-8 offset-md-2">
+            <button type="submit" class="btn btn-primary col-lg-12" [disabled]="loginForm.invalid">Login</button>
+          </div>
+        </div>
+      </form>
+         
+      <a style="color: orangered; margin-left: 10px" routerLink="/register">New user? click here to register</a>
+  
+      <br>
+  
+      <a style="color: orangered; margin-left: 10px" routerLink="/reset-password">Forgot your password?</a>
+  
+      <div class="success" *ngIf="success_message">
+        Information has been saved successfully
+      </div>
+  
+      <div class="alert" *ngIf="error_message">
+        {{error_message}}
+      </div>
+    </div>
+  </section>

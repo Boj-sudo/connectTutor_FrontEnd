@@ -1,0 +1,33 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Undergraduate College</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Undergraduate_College" placeholder="Enter Undergraduate College">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Undergraduate Majors</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Undergraduate_Majors" placeholder="Enter Undergraduate Majors">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Undergraduate Degree Type</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Undergraduate_Degree_Type" placeholder="Enter Undergraduate Degree Type">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Degree Completion Year</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Degree_Completion_Year" placeholder="Enter Degree Completion Year">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Teaching Certificate</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Teaching_Certificate">
+        </div>
+    </div>
+</div>
+
+<button (click)="addBooking()" *ngIf="vacancy.Applicant_ID==0" class="btn btn-primary">Add</button>
+<button (click)="updateBooking()" *ngIf="vacancy.Applicant_ID!=0" class="btn btn-primary">Update</button>
+
+

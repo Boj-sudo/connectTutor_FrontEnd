@@ -1,0 +1,66 @@
+<div class="header">
+    <app-header></app-header>
+</div>
+
+<section class="firstpage">
+    <div class="firstp col-lg-11 m-auto">
+        <br>
+        <br>
+        <div class="text-left">
+            <h3>Become a connectTutor! TUTOR</h3>
+            <p>connectTutor! seeks qualified applicants for tutoring jobs nationwide. Enjoy the flexibility and compensation of a tutor job in your field. We encourage all educational enthusiasts to be a tutor and make a difference in someone’s life.</p>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="text-left">
+          <h4><b>Personal Information</b></h4>
+      </div>
+
+      <br>
+      <hr>
+
+        <form [formGroup]="vacancy_service.formModel" autocomplete="off" (submit)="onSubmit()">
+            <div class="form-group required">
+              <label>Applicant Name</label>
+              <input class="form-control" formControlName="Firstname">
+              <label class="text-danger" *ngIf="vacancy_service.formModel.get('Firstname')?.touched && vacancy_service.formModel.get('Firstname')?.errors?.['required']">This field is required.</label>
+            </div>
+      
+            <div class="form-group required">
+              <label>Applicant Surname</label>
+              <input class="form-control" formControlName="Lastname">
+              <label class="text-danger" *ngIf="vacancy_service.formModel.get('Lastname')?.touched && vacancy_service.formModel.get('Lastname')?.errors?.['required']">This field is required.</label>
+            </div>
+      
+            <div class="form-group required">
+              <label>Applicant Email</label>
+              <input class="form-control" formControlName="Applicant_Email">
+              <label class="text-danger" *ngIf="vacancy_service.formModel.get('Applicant_Email')?.touched && vacancy_service.formModel.get('Applicant_Email')?.errors?.['email']">Invalid email address.</label>
+            </div>
+      
+            <div class="form-group required">
+              <label>Applicant Contact</label>
+              <input class="form-control" formControlName="Contact_Number">
+              <label class="text-danger" *ngIf="vacancy_service.formModel.get('Contact_Number')?.touched && vacancy_service.formModel.get('Contact_Number')?.errors?.['required']">This field is required.</label>
+            </div>
+      
+            <div class="form-row">
+              <div class="form-group col-md-8 offset-md-2">
+                <button type="submit" class="btn btn-dark" style="height: fit-content;" [disabled]="!vacancy_service.formModel.valid">Continue</button>
+              </div>
+            </div>
+          </form>
+        
+        <div class="success" *ngIf="success_message">
+            Information has been saved successfully
+            {{vacancy_selected}}
+        </div>
+      
+        <div class="alert" *ngIf="error_message">
+            {{error_message}}
+        </div>
+        <hr>
+    </div>
+</section>

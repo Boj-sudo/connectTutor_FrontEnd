@@ -1,0 +1,28 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Module Name</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Module_Name" placeholder="Enter Module Name">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Module Description</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Module_Description" placeholder="Enter Module Description">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Module Image</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Module_Image" placeholder="Enter Module Image Name">
+        </div>
+    </div>
+
+    <div class="ml-3 bd-highlight" style="width: 40%;">
+        <img [src]=PhotoFilePath height="250px;" width="200px;">
+        <input type="file" (change)="uploadPhoto($event)" class="mt-2"/>
+    </div>
+</div>
+
+<button (click)="addModule()" *ngIf="mod.Module_ID==0" class="btn btn-primary">Add</button>
+
+
+

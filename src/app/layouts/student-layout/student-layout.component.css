@@ -1,0 +1,54 @@
+mat-toolbar {
+    background: white;
+    color: black;
+}
+
+.navbar
+{
+    background-color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link
+{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar-light .navbar-nav .nav-link:hover
+{
+    color: orangered;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.navbar-light .navbar-nav .dropdown-item:hover
+{
+    color: orangered;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: lightskyblue;
+    color: black;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.content {
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 35px;
+    background: rgb(235, 232, 232);
+    color: black;
+}
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}
+
+

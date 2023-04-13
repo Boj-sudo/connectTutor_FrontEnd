@@ -1,0 +1,31 @@
+<h1 style="text-align: center"><b>Sessions</b></h1>
+
+<hr>
+
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+        <th>Module Name</th>
+        <th>Tutor Email</th>
+        <th>Session Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Session Status</th>
+        <th>Options</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let dataItem of sessionDetails">
+        <td>{{ dataItem.Module_Name }}</td>
+        <td>{{ dataItem.Tutor_Email }}</td>
+        <td>{{ dataItem.Session_Date }}</td>
+        <td>{{ dataItem.Start_Time }}</td>
+        <td>{{ dataItem.End_Time }}</td>
+        <td>{{ dataItem.Session_Status }}</td>
+        <td>
+          <button type="submit" routerLink="/join-session" class="btn btn-primary col-lg-12">Join</button>
+        </td>
+    </tr>
+  </tbody>
+</table>

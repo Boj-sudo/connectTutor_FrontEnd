@@ -1,0 +1,17 @@
+<h1 style="text-align: center"><b>Registered Modules</b></h1>
+
+<hr>
+
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+        <th>Module Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let dataItem of moduleDetails">
+        <td>{{ dataItem.Module_Name }}</td>
+    </tr>
+  </tbody>
+</table>

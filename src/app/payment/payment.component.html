@@ -1,0 +1,47 @@
+<div class="header">
+    <app-headers></app-headers>
+</div>
+
+<h2>{{ title }}</h2>
+
+<hr/>
+<div class="section-payment">
+<google-pay-button class="ml-10"
+    environment="TEST"
+    buttonType="book"
+    buttonColor="black"
+    [paymentRequest]="{
+    apiVersion: 2,
+    apiVersionMinor: 0,
+    allowedPaymentMethods: [
+        {
+            type: 'CARD',
+            parameters: {
+                allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+                allowedCardNetworks: ['AMEX', 'VISA', 'MASTERCARD']
+            },
+            tokenizationSpecification: {
+                type: 'PAYMENT_GATEWAY',
+                parameters: {
+                gateway: 'example',
+                gatewayMerchantId: 'exampleGatewayMerchantId'
+                }
+            }
+          }
+        ],
+        merchantInfo: {
+            merchantId: '12345678901234567890',
+            merchantName: 'Demo Merchant'
+        },
+        transactionInfo: {
+            totalPriceStatus: 'FINAL',
+            totalPriceLabel: 'Total',
+            totalPrice: '100.00',
+            currencyCode: 'USD',
+            countryCode: 'US'
+        }
+    }"
+    
+    (loadpaymentdata)="onLoadPaymentData($event)"
+></google-pay-button>
+</div>

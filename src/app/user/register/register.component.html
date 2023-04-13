@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="col-md-3">
+      <a routerLink="/home"><img src="../../../assets/Logo_edu.jpg" height="15%" width="15%"></a>
+      <a class="navbar-brand" routerLink="/home"><b>SocraTutor</b></a>
+    </div>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">     
+          <li class="nav-item">
+            <a style="text-align:center" routerLink="/become-tutor" class="btn btn-lg btn-primary">Become a tutor</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+  <section class="registeruser">
+    <div class="register col-lg-7 m-auto shadow-lg">
+      <div class="text-center">
+        <h1>Sign Up</h1>
+        <h6>Please provide the details below to sign up.</h6>
+      </div>
+  
+      <form [formGroup]="user_service.formModel" autocomplete="off" (submit)="onSubmit()">
+        <div class="form-group required">
+          <label>Student Name</label>
+          <input class="form-control" formControlName="Student_Name">
+          <label class="text-danger" *ngIf="user_service.formModel.get('Student_Name')?.touched && user_service.formModel.get('Student_Name')?.errors?.['required']">This field is required.</label>
+        </div>
+  
+        <div class="form-group required">
+          <label>Student Surname</label>
+          <input class="form-control" formControlName="Student_Surname">
+          <label class="text-danger" *ngIf="user_service.formModel.get('Student_Surname')?.touched && user_service.formModel.get('Student_Surname')?.errors?.['required']">This field is required.</label>
+        </div>
+  
+        <div class="form-group required">
+          <label>Student Email</label>
+          <input class="form-control" formControlName="Student_Email">
+          <label class="text-danger" *ngIf="user_service.formModel.get('Student_Email')?.touched && user_service.formModel.get('Student_Email')?.errors?.['email']">Invalid email address.</label>
+        </div>
+  
+        <div class="form-group required">
+          <label>Student Contact</label>
+          <input class="form-control" formControlName="Student_Contact">
+          <label class="text-danger" *ngIf="user_service.formModel.get('Student_Contact')?.touched && user_service.formModel.get('Student_Contact')?.errors?.['required']">This field is required.</label>
+        </div>
+  
+        <div formGroupName="Passwords">
+          <div class="form-group required">
+            <label>Student Password</label>
+            <input type="password" class="form-control" formControlName="Student_Password">
+            <label class="text-danger" *ngIf="user_service.formModel.get('Passwords.Student_Password')?.touched && user_service.formModel.get('Passwords.Student_Password')?.errors?.['required']">This field is required.</label>
+            <label class="text-danger" *ngIf="user_service.formModel.get('Passwords.Student_Password')?.touched && user_service.formModel.get('Passwords.Student_Password')?.errors?.['minlength']">Minimum 4 characters required.</label>
+          </div>
+  
+          <div class="form-group required">
+            <label>Confirm Password</label>
+            <input type="password" class="form-control" formControlName="ConfirmPassword">
+            <label class="text-danger" *ngIf="user_service.formModel.get('Passwords.ConfirmPassword')?.touched && user_service.formModel.get('Passwords.ConfirmPassword')?.errors?.['required']">This field is required.</label>
+            <label class="text-danger" *ngIf="user_service.formModel.get('Passwords.ConfirmPassword')?.touched && user_service.formModel.get('Passwords.ConfirmPassword')?.errors?.['passwordMismatch']">Confirm Password does not match.</label>
+          </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="form-group col-md-8 offset-md-2">
+            <button type="submit" class="btn btn-primary col-lg-12" [disabled]="!user_service.formModel.valid">Register</button>
+          </div>
+        </div>
+      </form>
+      <a style="color: orangered; margin-top: 10px" routerLink="/login">Already registered? Click to Login </a>
+  </div> 
+  </section>
+  
+  

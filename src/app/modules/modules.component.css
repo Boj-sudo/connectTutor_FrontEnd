@@ -1,0 +1,33 @@
+.course
+{
+    background-color: #eff6ff;
+    padding: 50px 100px;
+    height: 1000px;
+}
+
+.box
+{
+    background-color: #ffffff;
+    padding: 10px 20px;
+}
+
+.box a
+{
+    cursor: pointer;
+    color: rgb(23, 178, 199);
+    margin-top: 10px;
+}
+
+.box a:hover
+{
+    text-decoration: underline;
+}
+
+@media screen and (max-width:600px)
+{
+  .course
+    {
+    background-color: #eff6ff;
+    padding: 50px 10px;
+    }
+}

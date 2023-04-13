@@ -1,0 +1,38 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="form-group row" style="width: 60%;">
+        <label class="col-sm-2 col-form-label">Tutor Name</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Tutor_Name" placeholder="Enter Tutor Name">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Tutor Surname</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Tutor_Surname" placeholder="Enter Tutor Surname">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Tutor Contact</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Tutor_Contact" placeholder="Enter Tutor Contact">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Tutor Email</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Tutor_Email" placeholder="Enter Tutor Email">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Module Name</label>
+        <div class="col-sm-10">
+            <input type="type" class="form-control" [(ngModel)]="Module_Name" placeholder="Enter Module Name">
+        </div>
+    </div>
+
+    <div class="ml-3 bd-highlight" style="width: 40%;">
+        <img [src]=Photo_Path height="250px;" width="200px;">
+        <input type="file" (change)="uploadPhoto($event)" class="mt-2"/>
+    </div>
+</div>
+
+<button (click)="addTutor()" *ngIf="tur.Tutor_ID==0" class="btn btn-primary">Add</button>
+<button (click)="updateTutor()" *ngIf="tur.Tutor_ID!=0" class="btn btn-primary">Update</button>
+
+

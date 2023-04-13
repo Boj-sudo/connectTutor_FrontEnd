@@ -1,0 +1,98 @@
+<div class="header">
+  <app-headers></app-headers>
+</div>
+
+<section class="booking">
+    <div class="book col-lg-7 m-auto shadow-lg">
+      <div class="text-center">
+        <h1>Booking</h1>
+        <h6>Please provide your details below to book with us.</h6>
+      </div>
+
+
+    <form [formGroup]="book_service.formModel" autocomplete="off" (submit)="onSubmit()">
+      <div class="form-group required">
+        <!--<label>Student Email</label>
+        <input class="form-control" formControlName="Student_Email">-->
+        <label>Student Email</label>
+        <select class="col-sm-10" class="form-control" formControlName="Student_Email">
+          <option>Select</option>
+          <option *ngFor="let studentEmail of StudentsEmailList">
+              {{studentEmail.Student_Email}}
+          </option>
+        </select>
+        <label class="text-danger" *ngIf="book_service.formModel.get('Student_Email')?.touched && book_service.formModel.get('Student_Email')?.errors?.['email']">Invalid email address.</label>
+      </div>
+
+      <div class="form-group required">
+        <label>Module Name</label>
+        <select class="form-control" formControlName="Module_Name">
+          <option>Select</option>
+          <option *ngFor="let moduleName of ModuleNameList">
+              {{moduleName.Module_Name}}
+          </option>
+        </select>
+        <label class="text-danger" *ngIf="book_service.formModel.get('Module_Name')?.touched && book_service.formModel.get('Module_Name')?.errors?.['required']">This field is required.</label>
+      </div>
+
+      <div class="form-group required">
+        <label>Tutor Email</label>
+        <select class="form-control" formControlName="Module_Name">
+          <option>Select</option>
+          <option *ngFor="let tutorEmail of TutorEmailList">
+              {{tutorEmail.Tutor_Email}}
+          </option>
+        </select>
+        <label class="text-danger" *ngIf="book_service.formModel.get('Tutor_Email')?.touched && book_service.formModel.get('Tutor_Email')?.errors?.['email']">Invalid email address.</label>
+      </div>
+      
+      <label for="exampleInputFirstName" class="form-label">Session Date</label>
+        <div class="d-flex flex-row bd-highlight mb-3">
+          <div class="form-group row" style="width: 50%;">
+            <div class="col-sm-10">
+              <input type="date" min="{{currentDate | date:'yyyy-MM-dd'}}" class="form-control" formControlName="Start_Date">
+              <label class="text-danger" *ngIf="book_service.formModel.get('Start_Date')?.touched && book_service.formModel.get('Start_Date')?.errors?.['required']">This field is required.</label>
+            </div>
+          </div>
+        </div>
+
+        <label for="exampleInputFirstName" class="form-label">Session Time</label>
+        <div class="d-flex flex-row bd-highlight mb-3">
+          <div class="form-group row" style="width: 50%;">
+            <div class="col-sm-10">
+              <input type="time" class="form-control" formControlName="Start_Time">
+              <label class="text-danger" *ngIf="book_service.formModel.get('Start_Time')?.touched && book_service.formModel.get('Start_Time')?.errors?.['required']">This field is required.</label>
+            </div>
+          </div>
+
+          <div class="form-group row" style="width: 50%;">
+            <div class="col-sm-10">
+              <input type="time" class="form-control" formControlName="End_Time">
+              <label class="text-danger" *ngIf="book_service.formModel.get('End_Time')?.touched && book_service.formModel.get('End_Time')?.errors?.['required']">This field is required.</label>
+            </div>
+          </div>
+        </div>
+  
+        <br>
+
+      <div class="form-row">
+        <div class="form-group col-md-8 offset-md-2">
+          <button type="submit" class="btn btn-primary col-lg-12" [disabled]="!book_service.formModel.valid">Book</button>
+        </div>
+      </div>
+      </form>
+    <div class="success" *ngIf="success_message">
+      Information has been saved successfully
+      {{booking_selected}}
+    </div>
+
+    <div class="alert" *ngIf="error_message">
+      {{error_message}}
+    </div>
+  </div>    
+</section>
+  
+
+  
+
+

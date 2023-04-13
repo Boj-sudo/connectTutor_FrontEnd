@@ -1,0 +1,13 @@
+.joinsession
+{
+    background-color: green;
+    padding: 140px 100px;
+    height: 800px;
+}
+
+@media screen and (max-width:600px){
+    .joinsession
+     {
+        padding: 140px 30px;
+     }
+}

@@ -1,0 +1,25 @@
+.navbar
+{
+    background-color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link
+{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar-light .navbar-nav .nav-link:hover
+{
+    color: orangered;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.navbar-light .navbar-nav .dropdown-item:hover
+{
+    color: orangered;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
