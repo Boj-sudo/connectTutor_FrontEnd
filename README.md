@@ -11,6 +11,7 @@
 
 Admin and Tutor cannot register to our system but rather can be added to the system, only the student is allowed to register
 to our system.
+
 Tutors should apply to our system using the become-tutor button and then only successful tutors will then be added to our system
 by the admin.
 Admin can be hired by us the owners of the system and add them to the system to have all the privilleges of our system
@@ -20,6 +21,19 @@ When a student login, the system will take the student to the student portal whe
 When a tutor login, the system will take the tutor to the tutor portal where he can then start the session and other things. 
 
 Even when the admin login, the system will take the admin to the admin portal where he can do almost everything our system offers.
+
+### Login Credentials
+Admin credentials:
+Username: jes@gmail.com
+Password: 12345
+
+Tutor credentials:
+Username: kat@gmail.com
+Password: 1234
+
+Student credentials:
+Username: tsietsibojane7@gmail.com
+Password: 12345
 
 Please clone the connectTutor_Docs for more information.
 
