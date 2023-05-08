@@ -24,16 +24,16 @@ Even when the admin login, the system will take the admin to the admin portal wh
 
 ### Login Credentials
 Admin credentials:
-Username: jes@gmail.com
-Password: 12345
+- Username: jes@gmail.com
+- Password: 12345
 
 Tutor credentials:
-Username: kat@gmail.com
-Password: 1234
+- Username: kat@gmail.com
+- Password: 1234
 
 Student credentials:
-Username: tsietsibojane7@gmail.com
-Password: 12345
+- Username: tsietsibojane7@gmail.com
+- Password: 12345
 
 Please clone the connectTutor_Docs for more information.
 
